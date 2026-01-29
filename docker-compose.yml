@@ -1,5 +1,6 @@
 services:
   pwsh-cron:
+    image: nickadam/pwsh-cron:latest
     build: .
     environment:
       - CRONJOB=* * * * * pwsh -File /root/script.ps1
