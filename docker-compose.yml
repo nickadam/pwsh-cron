@@ -1,0 +1,6 @@
+services:
+  pwsh-cron:
+    build: .
+    environment:
+      - CRONJOB=* * * * * pwsh -File /root/script.ps1
+      - SCRIPT=Get-Date | Out-File -Append /var/log/cron.log
